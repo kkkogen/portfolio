@@ -43,9 +43,15 @@ footer {
   border-top: 1px solid #eee;
 }
 
-/*ここからオリジナルcssを書いていく*/
+/*ここからオリジナルcssを書いていく-------------------------------------------------------*/
 h1, h2, h3 {
   font-family: Georgia, serif;
+}
+
+h1 {
+  text-align: center; /* ← これでテキストを中央に配置 */
+  font-size: 2em;
+  margin-top: 40px;
 }
 
 /* ギャラリー用のグリッドレイアウト */
@@ -55,6 +61,27 @@ h1, h2, h3 {
   grid-gap: 20px; /* 画像の間の余白 */
   max-width: 1200px; /* 最大横幅を制限 */
   margin: 0 auto;
+}
+
+/* 各画像＋キャプションのブロック */
+.gallery-item {
+  text-align: left;
+}
+
+/* 画像自体の見た目 */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* キャプションのスタイル */
+.caption {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
 }
 
 /* 画像スタイル */
