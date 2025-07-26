@@ -42,3 +42,32 @@ footer {
   color: #666;
   border-top: 1px solid #eee;
 }
+
+/*ここからオリジナルcssを書いていく*/
+h1, h2, h3 {
+  font-family: Georgia, serif;
+}
+
+/* ギャラリー用のグリッドレイアウト */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 横に3枚 */
+  grid-gap: 20px; /* 画像の間の余白 */
+  max-width: 1200px; /* 最大横幅を制限 */
+  margin: 0 auto;
+}
+
+/* 画像スタイル */
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  transition: transform 0.2s ease;
+}
+
+.gallery a:hover img {
+  transform: scale(1.02); /* 少しズーム */
+  cursor: pointer;
+}
