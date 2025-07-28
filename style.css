@@ -87,3 +87,10 @@ h1 {
   transform: scale(1.02); /* 少しズーム */
   cursor: pointer;
 }
+
+/* 現在位置がわかるナビゲーション */
+nav a:hover,
+nav a:focus {
+  color: #007aff; /* アクティブ色 */
+  border-bottom: 1px solid #007aff;
+}
