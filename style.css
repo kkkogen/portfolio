@@ -3,6 +3,7 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   color: #111;
   background-color: #fff;
+  text-align: center;
 }
 
 header {
@@ -71,6 +72,7 @@ h1 {
   margin-top: 40px;
 }
 
+ /* 画面全体に表示させる写真 */
 .slideshow {
   position: relative;
   width: 100%;
@@ -118,7 +120,7 @@ h1 {
 /* キャプションのスタイル */
 .caption {
   font-family: Georgia, serif;
-  font-size: 14px;
+  font-size: 20px;
   color: #555;
   margin-top: 8px;
 }
@@ -134,6 +136,55 @@ h1 {
 }
 
 .gallery a:hover img {
-  transform: scale(1.02); /* 少しズーム */
+  transform: scale(1.07); /* 少しズーム */
   cursor: pointer;
+}
+
+/* メイン画像のスタイル */
+.main-image {
+  width: 100%;
+  height: auto;
+  opacity: 0; /* 初期状態では透明 */
+  transition: opacity 2s ease-in-out;
+}
+
+.main-image.visible {
+  opacity: 1; /* クラスがつくと表示される */
+}
+
+/* フォントの設定 */
+@font-face {
+  font-family: 'Shippori Mincho';
+  src: url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap');
+}
+
+.shippori-mincho {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.shippori-mincho-bold {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.shippori-mincho-italic {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.shippori-mincho-semibold {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* pに適用されるフォントの設定 */
+p {
+  font-family: "Shippori Mincho", serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 20px 0;
 }

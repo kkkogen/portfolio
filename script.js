@@ -16,3 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(showNextSlide, interval);
 });
+
+//ページが読み込まれたときにメイン画像を表示
+window.addEventListener("load", function() {
+  const mainImage = document.querySelector(".main-image");
+  mainImage.classList.add("visible");
+});
