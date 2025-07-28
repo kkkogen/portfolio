@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -23,16 +23,6 @@ nav ul {
 nav a {
   text-decoration: none;
   color: #111;
-}
-
-main {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-section {
-  margin-bottom: 60px;
 }
 
 footer {
@@ -72,7 +62,6 @@ h1 {
 .gallery-item img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -91,7 +80,7 @@ h1 {
   display: block;
   object-fit: cover;
   border: 1px solid #ccc;
-  transition: transform 0.2s ease;
+  transition: transform 0.9s ease;
 }
 
 .gallery a:hover img {
