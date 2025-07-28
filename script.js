@@ -22,3 +22,37 @@ window.addEventListener("load", function() {
   const mainImage = document.querySelector(".main-image");
   mainImage.classList.add("visible");
 });
+
+let lastScrollTop = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // 下にスクロールした → 隠す
+    header.classList.add("hide");
+  } else {
+    // 上にスクロールした → 表示
+    header.classList.remove("hide");
+  }
+
+  lastScrollTop = scrollTop;
+});
+
+
+// Intersection Observerでフェードイン　About
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-in");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+document.querySelectorAll("#about").forEach(el => {
+  observer.observe(el);
+});
+
