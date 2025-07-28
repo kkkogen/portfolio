@@ -7,21 +7,27 @@ body {
 }
 
 header {
-  position: relative;
-  padding: 40px 0 20px;
+  padding: 10px 0; /* ← 上下の余白を狭くする */
+  transition: transform 0.5s ease;
+  z-index: 1000;
+  background-color: white;
+  position: sticky;
+  top: 0;
   border-bottom: 1px solid #ccc;
   text-align: center;
 }
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em; /* 必要であればフォントサイズも少し小さく */
+  font-family: 'Shippori Mincho', serif;
+}
+
 
 section{
   margin-bottom: 100px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2em;
-  font-family: 'Shippori Mincho', serif;
-}
 
 /* ボーダーラインに沿って右下に配置されるナビゲーション */
 nav {
