@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>作品1 | KOGEN UEDA Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="fade-start">
+  <header>
+    <h1><a href="index.html" style="text-decoration: none; color: inherit;">My Portfolio</a></h1>
+     <nav class="back-nav">
+    <a href="index.html" class="back-link header-back-link">ポートフォリオ一覧へ戻る</a>
+  </nav>
+  </header>
+
+  <!-- フェードインアニメーションのためのクラスを追加 -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-start");
+
+    // ページが完全に読み込まれたらフェードイン
+    window.addEventListener("load", () => {
+      document.body.classList.add("fade-end");
+    });
+  });
+  </script>
+
+
+
+  <main class="portfolio-detail" >
+    <section class="detail-image" >
+      <img src="images/portfoliocode.jpeg" alt="ポートフォリオサイトの制作コード" />
+    </section>
+
+    <section class="detail-info">
+      <h2>Business Plan Contest1</h2>
+      <p>
+        この作品は●●をテーマに制作したもので、使用した技法や目的、インスピレーションを簡潔に説明します。
+      </p>
+      <p>
+        制作時期：2025年7月
+      </p>
+    </section>
+
+    <section class="detail-back">
+      <a href="index.html" class="back-link">← ポートフォリオ一覧へ戻る</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 KOGEN UEDA</p>
+  </footer>
+</body>
+</html>

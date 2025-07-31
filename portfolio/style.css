@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Shippori Mincho', serif;
@@ -262,6 +266,17 @@ header {
 .back-link:hover {
   text-decoration: underline;
 }
+
+/* それぞれの作品ページのフェードイン用のアニメーション */
+body.fade-start {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+body.fade-end {
+  opacity: 1;
+}
+
 
 /* ヘッダー内の戻るリンク用 */
 .back-nav {

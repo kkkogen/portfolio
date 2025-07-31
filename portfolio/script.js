@@ -56,3 +56,4 @@ document.querySelectorAll("#about").forEach(el => {
   observer.observe(el);
 });
 
+

@@ -6,7 +6,7 @@
   <title>作品1 | KOGEN UEDA Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="fade-start">
   <header>
     <h1><a href="index.html" style="text-decoration: none; color: inherit;">My Portfolio</a></h1>
      <nav class="back-nav">
@@ -14,8 +14,22 @@
   </nav>
   </header>
 
-  <main class="portfolio-detail">
-    <section class="detail-image">
+  <!-- フェードインアニメーションのためのクラスを追加 -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-start");
+
+    // ページが完全に読み込まれたらフェードイン
+    window.addEventListener("load", () => {
+      document.body.classList.add("fade-end");
+    });
+  });
+  </script>
+
+
+
+  <main class="portfolio-detail" >
+    <section class="detail-image" >
       <img src="images/work1.jpeg" alt="作品1メイン画像" />
     </section>
 
