@@ -67,6 +67,11 @@ footer {
   border-top: 1px solid #eee;
 }
 
+a {
+  color: #0000ee;;
+  text-decoration: none;
+}
+
 /*ここからオリジナルcssを書いていく-------------------------------------------------------*/
 
 h1 {
@@ -130,7 +135,7 @@ h1 {
 /* 画像スタイル */
 .gallery img {
   width: 100%;
-  height: auto;
+  height: 320px;
   display: block;
   object-fit: cover;
   border: 1px solid #ccc;
@@ -220,18 +225,20 @@ header {
 
 /* 作品123456の詳細ページ用 --------------------------------------------------------------*/
 .portfolio-detail {
-  max-width: 1000px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
 .detail-image img {
-  width: 100%;
+  width: 1000px;
   height: auto;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   border: 1px solid #ddd;
   margin-bottom: 0px;
 }
+
+
 
 .detail-info h1 {
   text-align: left;
@@ -241,8 +248,17 @@ header {
   margin-bottom: 20px;
 }
 
+.detail-info h2 {
+  text-align: left;
+  font-size: 20px;
+  font-family: 'Shippori Mincho', serif;
+  color: #696969;
+  margin-bottom: 20px;
+}
+
 
 .detail-info p {
+  text-align: left;
   font-size: 18px;
   line-height: 1.8;
   color: #696969;
@@ -290,4 +306,29 @@ body.fade-end {
 
 .header-back-link:hover {
   text-decoration: underline;
+}
+
+
+/* レイアウトで左に画像、右に詳細 */
+.work {
+  text-align: left;
+  display: flex;
+  align-items: flex-start; /* 上端を揃える */
+  gap: 40px; /* 左右のスペースを空ける */
+  margin-bottom: 60px;
+  flex-wrap: wrap; /* スマホで縦並びにするため */
+}
+
+.work-image img {
+  max-width: 100%;
+  margin-top: 25px; /* 画像の上に余白を追加 */
+  height: auto;
+  width: 400px; /* 作品画像の横幅指定（調整可） */
+}
+
+.work-description {
+  flex: 1; /* 残りの幅を使ってくれる */
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.6;
 }
